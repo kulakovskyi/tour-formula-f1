@@ -1,12 +1,11 @@
 \:root
-  --promo-bg-color: #00002B
+
   --promo-color-black: #000
   --promo-color-pink: #E904F5
   --promo-color-gray: #E3E3E3
   --promo-color-blue: rgba(0, 198, 255, 1)
-  --promo-color-magenta: #FF267E
-  --promo-color-purple: rgb(40, 3, 120)
-  --promo-color-white: #FFFFFF
+
+
   --promo-colo-orange: #BB8531
   --promo-colo-orange-two: #E18A03
   --promo-shadow-blue-text: 0px 0px 15px rgba(0, 198, 255, 0.62), 0px 0px 20px rgba(0, 198, 255, 0.62), 0px 0px 20px rgba(0, 198, 255, 0.62), 0px 0px 20px rgba(0, 198, 255, 0.62), 0px 0px 11px #00C6FF
@@ -14,14 +13,48 @@
   --promo-shadow-orange-two-text: 0px 0px 5px #FFF06D, 0px 0px 7px #FFF06D, 0px 0px 17px #FFF06D, 0px 0px 24px #FFF06D, 2px 2px 1px #AD7402, 5px 7px 4px rgba(0, 0, 0, 0.25)
   --promo-shadow-gray-text: 1px 1px 1px rgba(0, 0, 0, 0.45)
   --promo-shadow-pink-text: 2px 2px 0px #000
+  //new
+  --promo-bg-color: #0B1560
+  --promo-color-magenta: #FF267E
+  --promo-color-purple: #A1BCF8
+  --promo-color-blue-btn: #121C6A
+  --promo-color-blue2: #010943
+  --promo-color-blue3: #1A3C94
+  --promo-color-blue4: #1E2150
+  --promo-color-blue5: #0030A0
+  --promo-color-blue6: #0D2872
+  --promo-color-white: #FFFFFF
+  --promo-shadow-magenta: 0px 0px 33.208px rgba(255, 0, 125, 0.60)
+  --promo-shadow-magenta2: 0px 0px 40px rgba(255, 0, 125, 0.54)
+  --promo-shadow-black: 0px 2px 4.8px #000
+  --promo-green-grad: linear-gradient(180deg, #00FFA3 29%, #08C48A 100%)
+  --promo-blue-grad: linear-gradient(180deg, #0068B5 29%, #054395 100%)
+  --promo-blue-grad-table: linear-gradient(180deg, #0054A6 0%, #3C46DC 100%)
+  --promo-green-light: #13E3EF
+  --promo-green-light2: #00FFC3
+  --promo-green-light3: #00FFA3
+  --promo-green-light2-opacity: rgba(0, 255, 195, 0.3)
+  --promo-green-shadow: 0 0 30px 0 rgba(0, 255, 194, 0.65)
+  --promo-green-shadow2: 0px 0px 39.93px 0px rgba(0, 255, 195, 0.50)
+  --promo-green-shadow3: 0px 0px 30px 0px rgba(0, 255, 194, 0.65)
 
 
 
 //fonts
 $font-suisse-semb: SuisseIntl-SemiBold, sans-serif
 $font-suisse-bold: SuisseIntl-Bold, sans-serif
-$font-gawaa: Gawaa-Italic, sans-serif
 $font-suisse-reg: SuisseIntl-Regular, sans-serif
+
+$font-exo-900-i: Exo2-BlackItalic, sans-serif
+$font-exo-800-i: Exo2-ExtraBoldItalic, sans-serif
+$font-exo-600-i: Exo2-SemiBoldItalic, sans-serif
+$font-exo-900: Exo2-Black, sans-serif
+$font-exo-700: Exo2-Bold, sans-serif
+$font-exo-600: Exo2-SemiBold, sans-serif
+$font-exo-400: Exo2-Regular, sans-serif
+
+
+
 
 body
   &.dark
@@ -31,7 +64,6 @@ body
 
 .overflow
   overflow: hidden
-
 
 .hide
   display: none !important
@@ -48,717 +80,876 @@ body
   flex-direction: column
   background: var(--promo-bg-color)
 
-.wrapper-bg
-  display: flex
-  flex-direction: column
-  background: url("../img/big-bg.svg") no-repeat 50% 0/cover
 
 .custom-btn
-  width: 240px
-  height: 70px
-  display: flex
-  align-items: center
-  justify-content: center
-  font-family: $font-suisse-semb
+  padding: 26px 36px
+  display: inline-block
+  font-family: $font-exo-800-i
   text-transform: uppercase
-  padding-bottom: 6px
-  color: var(--promo-color-white)
-  text-shadow: var(--promo-shadow-gray-text)
-  background: url("../img/btn-bg.png") no-repeat 0 0/contain
-  font-size: 30px
-  line-height: 30px
-  letter-spacing: 2.4px
+  border-radius: 5px
+  color: var(--promo-color-blue-btn)
+  background: var(--promo-green-grad)
+  box-shadow: var(--promo-green-shadow)
+  font-size: 24px
+  line-height: 24px
+  letter-spacing: .72px
   cursor: pointer
   position: relative
   z-index: 1
-  &::before
-    content: ''
-    position: absolute
-    width: 100%
-    height: 100%
-    top: 0
-    left: 0
-    z-index: -1
-    opacity: 0
-    transition: opacity .3s ease
-    background: url("../img/btn-bg-hover.png") no-repeat 0 0/contain
-  &:hover::before
-    opacity: 1
+  transition: opacity .3s ease
+  &:hover
+    opacity: .7
 
-.custom-btn-two
-  width: 270px
-  height: 95px
-  display: flex
-  align-items: center
-  justify-content: center
-  font-family: $font-suisse-semb
-  text-transform: uppercase
-  padding-bottom: 23px
-  color: var(--promo-color-white)
-  text-shadow: var(--promo-shadow-gray-text)
-  background: url("../img/btn-bg2.png") no-repeat 0 0/contain
-  font-size: 20px
-  line-height: 20px
-  letter-spacing: 1.6px
+
+.custom-drop
+  width: 100%
+  margin: 0 auto
   cursor: pointer
+  outline: none!important
   position: relative
-  z-index: 1
-  &::before
-    content: ''
-    position: absolute
-    width: 100%
-    height: 100%
-    top: 0
-    left: 0
-    z-index: -1
-    opacity: 0
-    transition: opacity .3s ease
-    background: url("../img/btn-bg2-hover.png") no-repeat 0 0/contain
-  &:hover::before
-    opacity: 1
-  @media screen and (max-width: 550px)
-    padding: 0 45px 22px
+  text-align: left
+  &[open]
+    .custom-drop-title:before
+      transform: translateY(-50%) rotate(-45deg)
+    .custom-drop-title:after
+      transform: translateY(-50%) rotate(45deg)
+  .custom-drop-title:before
+    right: 35px
+    transform: translateY(-50%) rotate(45deg)
+  .custom-drop-title:after
+    transform: translateY(-50%) rotate(-45deg)
+    right: 45px
+  &-title
+    font-family: $font-exo-700
+    font-size: 21px
     line-height: 25px
-    text-align: center
+    color: var(--promo-color-white)
+    background:  var(--promo-blue-grad)
+    border-radius: 5px
+    padding: 20px 70px 23px 25px
+    position: relative
+    &:before,&:after
+      content: ""
+      background:  var(--promo-green-light)
+      width: 4px
+      height: 18px
+      display: block
+      position: absolute
+      top: 50%
+      z-index: 3
+      @media screen and (max-width: 550px)
+        height: 16px
+  summary::-webkit-details-marker
+    display: none
+  > summary
+    list-style: none
+  &-txt
+    cursor: default
+    border-radius: 5px
+    background: var(--promo-blue-grad)
+    margin-top: 10px
+    padding: 30px
+    @media screen and (max-width: 550px)
+      padding: 20px 20px
+    &-wrap
+      font-family: $font-suisse-reg
+      height: 400px
+      overflow-y: scroll
+      font-size: 14px
+      line-height: 28px
+      color:  var(--promo-color-white)
+      letter-spacing: .02em
+      padding: 0 20px 0 0
+      @media screen and (max-width: 550px)
+        padding: 0 15px 0 0
+      &::-webkit-scrollbar
+        width: 4px
+        height: 80%
+        background: rgba(255, 255, 255, 0.3)
+      &::-webkit-scrollbar-thumb
+        background-color: var(--promo-green-light)
+        width: 4px
+      p
+        font-family: $font-suisse-reg
+      span
+        display: block
+        padding-left: 15px
+        font-family: $font-suisse-reg
+      .retreat1
+        padding-left: 30px
+      a
+        font-family: $font-suisse-reg
+        color:  var(--promo-color-white)
+        text-decoration: underline
+        &:hover
+          text-decoration: none
+      .circle
+        padding-left: 30px
+        &:before
+          content: ''
+          width: 5px
+          height: 5px
+          background:  var(--promo-color-white)
+          border-radius: 50%
+          display: inline-block
+          margin: 0 4px 2px 0
+      strong
+        font-family: $font-suisse-reg
+
+
 
 .welcome
-  align-self: center
-  overflow: hidden
   position: relative
+  z-index: 10
+  padding: 100px 0 80px
+  background: url("../img/welcome/welcome-bg-desc.png") no-repeat 50% 0/cover
+  @media screen and (max-width: 1024px)
+    background: url("../img/welcome/welcome-bg-tab.jpg") no-repeat 50% 0/cover
+  @media screen and (max-width: 550px)
+    background: url("../img/welcome/welcome-bg-mob.jpg") no-repeat 50% 0/cover
   &__container
-    max-width: 1660px
-    min-width: 1660px
+    max-width: 1670px
     padding: 0 15px
     margin: 0 auto
-  &__image
-    position: relative
-    width: 100%
-    display: flex
-    flex-direction: column
-    align-items: center
-    &-title
-      position: relative
-      z-index: 5
-      margin: -80px 0 0 0
-      max-width: 750px
-      filter: grayscale(1) brightness(0.5)
-      animation: 4s titleAnimation ease infinite
-    &-bg
-      position: absolute
-      width: 100%
-      height: 100%
-      background: url("../img/welcome/welcome-bg-desc.png") no-repeat 50% 0/contain
-      @media screen and (max-width: 1024px)
-        background: url("../img/welcome/welcome-bg-tab.png") no-repeat 50% 0/contain
-      @media screen and (max-width: 550px)
-        background: url("../img/welcome/welcome-bg-mob.png") no-repeat 50% 0/contain
-    &::before
-      content: ''
-      position: absolute
-      top: 270px
-      left: 362px
-      z-index: 6
-      width: 190px
-      height: 200px
-      background: url("../img/welcome/arrow1.png") no-repeat 0 0/contain
-      animation: 3s opacityArrow ease infinite
-    &::after
-      content: ''
-      position: absolute
-      top: 432px
-      transform: rotate(6deg)
-      right: 403px
-      z-index: 6
-      width: 140px
-      height: 160px
-      background: url("../img/welcome/arrow2.png") no-repeat 0 0/contain
-      animation: 3s opacityArrow ease infinite
-      animation-delay: 1s
-    &-left
-      position: absolute
-      left: 120px
-      bottom: -50px
-      width: 500px
-      height: 500px
-      background: url("../img/welcome/decor-left-desc.png") no-repeat 50% 0/contain
-      @media screen and (max-width: 1024px)
-        background: url("../img/welcome/decor-left-tab.png") no-repeat 50% 0/contain
-      @media screen and (max-width: 550px)
-        background: url("../img/welcome/decor-left-mob.png") no-repeat 50% 0/contain
-    &-right
-      position: absolute
-      right: 210px
-      z-index: 10
-      bottom: -50px
-      width: 280px
-      height: 435px
-      background: url("../img/welcome/decor-right-desc.png") no-repeat 50% 0/contain
-      @media screen and (max-width: 1024px)
-        background: url("../img/welcome/decor-right-tab.png") no-repeat 50% 0/contain
-      @media screen and (max-width: 550px)
-        background: url("../img/welcome/decor-right-mob.png") no-repeat 50% 0/contain
-    &-pers
-      position: relative
-      z-index: 5
-      max-width: 910px
-      &-text
-        padding: 0 40px 49px
-        display: flex
-        flex-direction: column
-        align-items: center
-        justify-content: center
-        text-align: center
-        font-family: $font-gawaa
-        font-size: 24px
-        line-height: 22px
-        color: var(--promo-color-white)
-        text-shadow: var(--promo-shadow-blue-text)
-        top: -70px
-        right: 160px
-        position: absolute
-        width: 250px
-        height: 220px
-        transform: rotate(7.221deg)
-        background: url("../img/welcome/text-bg.svg") no-repeat 0 0/contain
-  &__text
-    margin: -60px auto 0
+  &__title
+    transform: rotate(-10deg)
+    margin: 0 0 380px
+    &-top,
+    &-bottom
+      font-size: 70px
+      line-height: 75px
+      font-family: $font-exo-900-i
+      color: var(--promo-color-white)
+      text-shadow: var(--promo-shadow-magenta)
+    &-top
+      text-transform: uppercase
+    &-center
+      font-size: 170px
+      line-height: 170px
+      text-transform: uppercase
+      font-family: $font-exo-900-i
+      color: var(--promo-color-magenta)
+      text-shadow: var(--promo-shadow-magenta2)
+      span
+        position: relative
+        left: -30px
+        font-family: 'Exo2-BlackItalic'
+        font-size: 120px
+        line-height: 120px
+  &__description
+    font-size: 13px
+    line-height: 15px
+    font-family: $font-exo-400
+    color: var(--promo-color-white)
+    text-shadow: var(--promo-shadow-black)
+
+.info
+  margin-top: -30px
+  padding: 140px 0 150px
+  position: relative
+  &__bg
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    width: 1920px
+    height: 655px
+    background: url("../img/info/info-bg-desc.png") no-repeat 0 0/contain
+  &__container
     position: relative
     z-index: 10
-    font-family: $font-suisse-reg
-    max-width: 835px
-    text-align: center
-    color: var(--promo-color-white)
-    text-shadow: var(--promo-shadow-gray-text)
-    opacity: 0.5
-    font-size: 12px
-    line-height: 14px
-    a
-      font-family: $font-suisse-reg
-      color: var(--promo-color-white)
-      text-decoration: underline
-      &:hover
-        text-decoration: none
-
-
-.detail
-  &__container
-    max-width: 1190px
-    padding: 0 15px
-    margin: 0 auto
-  &__row
-    display: flex
-    justify-content: space-between
-  &__info
-    padding-top: 150px
-    min-width: 510px
-    max-width: 510px
-  &__title
-    font-size: 74px
-    line-height: 76px
-    &-top
-      color: var(--promo-color-white)
-      text-shadow: var(--promo-shadow-blue-text)
-      font-family: $font-gawaa
-    &-bottom
-      animation: 3s decOne ease infinite
-      width: 483px
-      height: 110px
-      margin: -14px 0 -10px -25px
-      background: url("../img/detail/bonus-desc.png") no-repeat 0 0/contain
-      @media screen and (max-width: 550px)
-        background: url("../img/detail/bonus-mob.png") no-repeat 0 0/contain
-
-  &__text
-    font-family: $font-suisse-reg
-    color: var(--promo-color-white)
-    font-size: 17px
-    line-height: 30px
-    max-width: 510px
-    margin: 0 0 35px
-  &__subtitle
-    font-family: $font-gawaa
-    color: var(--promo-color-white)
-    text-shadow: var(--promo-shadow-blue-text)
-    font-size: 36px
-    line-height: 36px
-    margin: 0 0 15px
-  &__list
     display: flex
     flex-direction: column
-    gap: 28px
-  &__item
-    display: flex
-    align-items: center
-    gap: 20px
-    font-family: $font-suisse-reg
-    color: var(--promo-color-white)
-    font-size: 17px
-    line-height: 30px
-    &:first-child::before
-      animation: 2s decOne ease infinite
-      background: url("../img/detail/icon1.svg") no-repeat 0 0/contain
-    &:last-child::before
-      animation: 1.5s decOne ease infinite
-      background: url("../img/detail/icon2.svg") no-repeat 0 0/contain
-    &::before
-      content: ''
-      display: block
-      width: 70px
-      min-width: 70px
-      height: 60px
-  &__image
-    position: relative
-    width: 786px
-    margin: 0 0 0 -280px
-    &::before
-      pointer-events: none
-      content: ''
-      position: absolute
-      top: 30px
-      left: 10px
-      width: 100%
-      height: 100%
-      background: url("../img/detail/spin.svg") no-repeat 0 0/contain
-      animation: 35s spin linear infinite
-    img
-      position: relative
-      z-index: 10
-    &-text
-      z-index: 14
-      padding: 0 40px 49px
-      display: flex
-      flex-direction: column
-      align-items: center
-      justify-content: center
+    max-width: 1120px
+    margin: 0 auto
+    padding: 0 15px
+  &__title
+    transform: rotate(-6deg)
+    font-size: 40px
+    line-height: 42px
+    margin: 0 auto 80px
+    &-top
+      font-family: $font-exo-900-i
       text-align: center
-      font-family: $font-gawaa
-      font-size: 24px
-      line-height: 22px
       color: var(--promo-color-white)
-      text-shadow: var(--promo-shadow-blue-text)
-      top: 90px
-      right: -40px
+      text-shadow: var(--promo-shadow-magenta)
+    &-bottom
+      font-family: $font-exo-900-i
+      text-align: center
+      color: var(--promo-color-magenta)
+      text-shadow: var(--promo-shadow-magenta2)
+  &__text
+    font-family: $font-exo-600-i
+    font-size: 16px
+    line-height: 32px
+    letter-spacing: 0.48px
+    text-align: center
+    color: var(--promo-color-white)
+    margin: 0 0 85px
+  &__btn
+    align-self: center
+
+.rules
+  position: relative
+  padding: 0 0 65px
+  &__bg
+    position: absolute
+    top: 160px
+    left: 50%
+    transform: translateX(-50%)
+    width: 100%
+    height: 440px
+    mix-blend-mode: soft-light
+    background: url("../img/rules/rules-bg-desc.png") no-repeat 50% 0/cover
+  &__container
+    max-width: 1370px
+    padding: 0 15px
+    margin: 0 auto
+  &__title
+    margin: 0 0 40px
+    transform: rotate(-6deg)
+    text-align: center
+    font-family: $font-exo-900-i
+    font-size: 60px
+    line-height: 60px
+    color: var(--promo-color-white)
+    text-shadow: var(--promo-shadow-magenta)
+  &__list
+    display: flex
+    gap: 50px
+    justify-content: center
+    margin: 0 0 110px
+  &__item
+    position: relative
+    display: flex
+    flex-direction: column
+    width: 400px
+    &:before
+      content: ''
       position: absolute
-      width: 250px
-      height: 220px
-      transform: translate(-80px, 0)
-      background: url("../img/welcome/text-bg.svg") no-repeat 0 0/contain
-      opacity: 0
-      transition: .8s ease
-      &._view
-        transform: translate(0 ,0)
-        opacity: 1
+      width: 210px
+      height: 131px
+      background: url('../img/rules/arrow.png') no-repeat 0 0 / contain
+      right: -130px
+      top: 120px
+    &:nth-child(3)::before
+      content: none
+
+    &-text
+      margin: -110px 0 0 0
+      align-self: center
+      transform: rotate(-10deg)
+      max-width: 290px
+      font-size: 23px
+      line-height: 25px
+      font-family: $font-exo-800-i
+      color: var(--promo-color-magenta)
+      span
+        font-family: $font-exo-800-i
+        color: var(--promo-color-white)
+  &__drop
+    max-width: 530px
 
 
-.prize
-  margin: -220px 0 0 0
+.formula
+  position: relative
+  &__bg
+    position: absolute
+    top: -90px
+    left: 0
+    width: 100%
+    height: 570px
+    background: url("../img/formula/formula-bg-desc.png") no-repeat 50% 0/cover
+  &__bg-slider
+    mix-blend-mode: lighten
+    position: absolute
+    width: 1409px
+    height: 580px
+    left: 50%
+    top: 55px
+    transform: translateX(-49%)
+    background: url("../img/formula/bg-slider-desc.png") no-repeat 0 0/contain
   &__container
     max-width: 1670px
     margin: 0 auto
+    position: relative
+    z-index: 10
+  &__wrapper
+    margin: 0 0 60px
+    position: relative
+  &__control
+    position: absolute
+    width: 100%
+    max-width: 1220px
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    display: flex
+    justify-content: space-between
+    pointer-events: none
+    &-btn
+      cursor: pointer
+      pointer-events: initial
+      width: 80px
+      height: 80px
+      background: url("../img/formula/arrow-slider.svg") no-repeat 0 0/contain
+      transition: opacity .3s ease
+      &:hover
+        opacity: .7
+    &-right
+      transform: scale(-1,1)
   &__slider
+    padding: 50px 0
+    min-height: 520px
     display: flex
     justify-content: center
+    align-items: center
     overflow: hidden
-    transition: transform 0.5s ease
+    transition: 0.5s ease
   &__item
-    max-width: 1000px
-    min-width: 1000px
-    margin: 0 -500px
-    transition: transform 0.5s ease, z-index 0.5s, filter .5s ease, opacity .5s ease
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 40px
+    border-radius: 35px
+    background: var(--promo-color-blue2)
+    border: 2px solid var(--promo-color-blue3)
+    max-width: 540px
+    min-width: 540px
+    margin: 0 -270px
+    transition: .5s ease
     position: relative
-    filter: blur(6.5px)
-    opacity: .6
-    &-wrap
-      transform: scale(.8)
-      position: relative
-    &.active
-      filter: blur(0)
-      opacity: 1
-    &-info
-      padding: 80px 0 250px 0
+    overflow: hidden
+    &::after
+      content: ''
       position: absolute
       width: 100%
       height: 100%
       top: 0
-      left: -10px
-      z-index: 10
-      display: flex
-      flex-direction: column
-      align-items: center
-    &-title
-      max-width: 395px
-      position: relative
-      &::before,
-      &::after
-        content: ''
-        position: absolute
-        width: 115px
-        height: 90px
-        animation: 1s shadowBlue ease infinite
-        background: url("../img/prize/arrow.svg") no-repeat 0 0/contain
-    .titleTwo
-      position: relative
-      margin: 0 0 160px
-      &::before
-        top: 0
-        right: -30px
-        transform: rotate(154.645deg)
-      &::after
-        top: 10px
-        left: -30px
-        transform: rotate(13.645deg)
-    .titleOne
-      max-width: 300px
-      margin: 20px 0 177px
-      &::before
-        top: 20px
-        right: -90px
-        transform: rotate(174.645deg)
-      &::after
-        top: 40px
-        left: -110px
-        transform: rotate(-8.645deg)
-    .titleThree
-      max-width: 235px
-      margin: 20px 0 190px
-      &::before
-        top: 20px
-        right: -90px
-        transform: rotate(174.645deg)
-      &::after
-        top: 40px
-        left: -110px
-        transform: rotate(-8.645deg)
-    .titleFourth
-      max-width: 315px
-      margin: 20px 0 190px
-      &::before
-        top: 20px
-        right: -90px
-        transform: rotate(174.645deg)
-      &::after
-        top: 40px
-        left: -110px
-        transform: rotate(-8.645deg)
-    &-sum
-      white-space: nowrap
-      margin-bottom: 23px
-      text-align: center
-      font-size: 57px
-      opacity: 0.9
-      letter-spacing: 12px
-      position: relative
-      left: 18px
-      font-family: $font-suisse-semb
-      color: var(--promo-colo-orange-two)
-      text-shadow: var(--promo-shadow-orange-two-text)
-    &-btns
-      margin: 0 0 auto
-      display: flex
-      align-items: center
-      justify-content: center
-      gap: 12px
-      .left,
-      .right
-        width: 55px
-        height: 44px
-        position: relative
-        z-index: 1
-        cursor: pointer
-        &:hover::before
-          opacity: 1
-        &::before
-          content: ''
-          position: absolute
-          z-index: -1
-          width: 100%
-          height: 100px
-          top: 0
-          left: 0
-          opacity: 0
-          transition: opacity .3s ease
-      .left
-        background: url("../img/btn-left.png") no-repeat 0 0/contain
-        &::before
-          background: url("../img/btn-left-hover.png") no-repeat 0 0/contain
-      .right
-        background: url("../img/btn-right.png") no-repeat 0 0/contain
-        &::before
-          background: url("../img/btn-right-hover.png") no-repeat 0 0/contain
-    &-text
-      font-family: $font-suisse-semb
-      font-size: 17px
-      line-height: 19px
-      text-transform: uppercase
-      color: var(--promo-color-black)
-    &-stav
-      text-align: center
-      font-family: $font-suisse-bold
-      font-size: 83px
-      line-height: 85px
-      text-transform: uppercase
-      -webkit-text-stroke: 1.5px var(--promo-color-white)
-      color: var(--promo-color-pink)
-      text-shadow: var(--promo-shadow-pink-text)
-
-
-.info
-  margin: -200px 0 0 0
-  &__container
-    max-width: 1440px
-    padding: 0 15px
-    margin: 0 auto
-  &__row
-    display: flex
-  &__des
-    max-width: 600px
-    padding-top: 180px
-  &__title
-    font-family: $font-gawaa
-    color: var(--promo-color-white)
-    text-shadow: var(--promo-shadow-blue-text)
-    font-size: 46px
-    line-height: 46px
-    margin: 0 0 20px
-  &__text
-    display: flex
-    flex-direction: column
-    gap: 20px
-    p
-      font-family: $font-suisse-reg
-      color: var(--promo-color-white)
-      font-size: 17px
-      line-height: 30px
-  &__image
-    max-width: 815px
-    position: relative
+      left: 0
+      opacity: 0
+      transition: opacity .5s ease
+      background: var(--promo-color-blue2) url("../img/formula/active-slide-bg.jpg") no-repeat 50% 0/cover
     &::before
       content: ''
       position: absolute
-      top: 30px
-      left: 10px
-      width: 100%
+      pointer-events: none
+      top: 0
+      width: 80%
+      opacity: 0
       height: 100%
-      background: url("../img/detail/spin.svg") no-repeat 0 0/contain
-      animation: 35s spin linear infinite
-    img
+      background: #06123F
+      filter: blur(37.5px)
+      transition: .5s ease
+    &-wrap
       position: relative
-      z-index: 12
-    &-text
-      z-index: 15
-      padding: 0 40px 49px
+      z-index: 10
+      width: 100%
+    &.right-slide
+      &::before
+        left: 0
+    &.left-slide
+      &::before
+        right: 0
+    &.active
+      align-items: stretch
+      border: 4px solid var(--promo-green-light2)
+      box-shadow: var(--promo-green-shadow2)
+      filter: blur(0)
+      opacity: 1
+      .formula__item-per-title,
+      .formula__item-per-date
+        text-align: start
+      .formula__item-row
+        margin: 0 0 5px !important
+      .formula__item-date
+        display: flex !important
+      .formula__item-image
+        img
+          max-height: 180px !important
+      &::before
+        opacity: 0
+      &::after
+        opacity: 1
+    &-row
+      display: flex
+      justify-content: space-between
+      gap: 15px
+      margin: 0 0 25px
+    &-title
+      font-family: $font-exo-800-i
+      text-transform: uppercase
+      font-size: 37px
+      line-height: 40px
+      color: var(--promo-color-white)
+    &-date
+      display: flex
+      font-family: $font-exo-800-i
+      text-transform: uppercase
+      font-size: 37px
+      line-height: 40px
+      color: var(--promo-color-white)
+      flex-direction: column
+      align-items: center
+      gap: 5px
+      span
+        padding: 6px 8px
+        border-radius: 6px
+        background: var(--promo-blue-grad)
+        font-family: $font-exo-800-i
+        text-transform: uppercase
+        font-size: 15px
+        line-height: 12px
+        letter-spacing: .6px
+        color: var(--promo-color-white)
+        display: inline-block
+    &-image
+      margin: 0 auto 5px
       display: flex
       flex-direction: column
       align-items: center
+      img
+        pointer-events: none
+        max-width: 380px
+        max-height: 0
+        margin: 0 auto
+        display: inline-block
+        transition: max-height .5s ease
+    &-per
+      display: flex
+      flex-direction: column
+      gap: 7px
+      &-title
+        text-align: center
+        font-family: $font-exo-800-i
+        font-size: 16px
+        line-height: 16px
+        letter-spacing: 0.48px
+        text-transform: uppercase
+        color: var(--promo-color-magenta)
+      &-date
+        text-align: center
+        font-family: $font-exo-800-i
+        font-size: 20px
+        line-height: 20px
+        letter-spacing: 0.6px
+        text-transform: uppercase
+        color: var(--promo-color-white)
+
+.winner
+  display: none
+  padding: 0 0 90px
+  position: relative
+  &__bg
+    width: 100%
+    height: 660px
+    position: absolute
+    top: -160px
+    left: 0
+    background: url("../img/winner/player-bg-desc.png") no-repeat 50% 0/cover
+  &__bg-table
+    width: 100%
+    height: 480px
+    position: absolute
+    bottom: 190px
+    left: 0
+    background: url("../img/table/table-bg-desc.png") no-repeat 50% 0/cover
+  &__container
+    display: flex
+    flex-direction: column
+    max-width: 1670px
+    margin: 0 auto
+    position: relative
+    z-index: 10
+  &__title
+    transform: rotate(-6deg)
+    font-family: $font-exo-900-i
+    font-size: 40px
+    line-height: 45px
+    max-width: 500px
+    text-align: center
+    margin: 0 auto 60px
+    color: var(--promo-color-white)
+    text-shadow: var(--promo-shadow-magenta)
+  &__info
+    overflow: hidden
+    padding: 15px 20px
+    border-radius: 16px
+    max-width: 575px
+    margin: 0 auto 20px
+    border: 4px solid  var(--promo-color-magenta)
+    box-shadow: 0 0 40px 0 var(--promo-color-magenta)
+    background: url("../img/winner/winner-bg.jpg") no-repeat 50% 0/cover
+    display: flex
+    align-items: center
+    &-place
+      margin: 0 20px 0 0
+      display: flex
+      flex-direction: column
+      align-items: center
+      &-num
+        font-size: 44px
+        line-height: 44px
+        font-family: $font-exo-900-i
+        color: var(--promo-color-white)
+        margin: 0 0 8px
+        span
+          font-size: 29px
+          line-height: 29px
+          font-family: $font-exo-900-i
+      &-kof
+        padding: 6px 8px
+        border-radius: 6px
+        background: var(--promo-blue-grad)
+        font-family: $font-exo-600
+        text-transform: uppercase
+        font-size: 16px
+        line-height: 12px
+        letter-spacing: .6px
+        color: var(--promo-color-white)
+        display: inline-block
+    &-name
+      max-width: 220px
+      margin: 0 auto 0 0
+      font-family: $font-exo-900-i
+      font-size: 28px
+      line-height: 35px
+      color: var(--promo-color-white)
+      text-shadow: var(--promo-shadow-magenta)
+      letter-spacing: 0.28px
+      text-transform: uppercase
+    &-round
+      margin: 0 0 0 15px
+      &-top
+        font-family: $font-exo-600
+        font-size: 25px
+        line-height: 27px
+        text-transform: uppercase
+        color: var(--promo-color-white)
+        margin: 0 0 8px
+      &-bottom
+        text-align: end
+        font-size: 16px
+        line-height: 20px
+        font-family: $font-exo-800-i
+        color: var(--promo-color-magenta)
+  &__des
+    font-family: $font-exo-800-i
+    font-size: 16px
+    line-height: 20px
+    text-transform: uppercase
+    color: var(--promo-color-purple)
+    text-align: center
+    margin: 0 0 110px
+  &__btn
+    align-self: center
+
+.table
+  margin: 0 0 60px
+  &__title
+    transform: rotate(-6deg)
+    font-family: $font-exo-900-i
+    font-size: 60px
+    line-height: 65px
+    max-width: 570px
+    text-align: center
+    margin: 0 auto 60px
+    color: var(--promo-color-white)
+    text-shadow: var(--promo-shadow-magenta)
+
+.tableResults
+  text-align: center
+  position: relative
+  z-index: 3
+  &__wrap
+    background: var(--promo-color-blue2)
+    overflow: hidden
+    border-radius: 17px
+    border: 4px solid var(--promo-green-light2)
+    box-shadow: var(--promo-green-shadow2)
+    margin: 0 auto
+    width: 690px
+    text-align: left
+    position: relative
+    z-index: 20
+  &__head
+    width: calc(100% + 10px)
+    margin-right: 5px
+    position: relative
+    background: var(--promo-blue-grad-table)
+    &-list
+      display: flex
+    &-col
       justify-content: center
       text-align: center
-      font-family: $font-gawaa
-      font-size: 24px
-      line-height: 22px
+      display: inline-flex
+      align-items: center
+      font-family: $font-exo-600
+      font-size: 16px
+      line-height: 20px
+      padding: 10px 20px
       color: var(--promo-color-white)
-      text-shadow: var(--promo-shadow-blue-text)
-      top: 50px
-      right: 110px
-      position: absolute
-      width: 250px
-      height: 220px
-      transform: translate(-80px, 0)
-      background: url("../img/welcome/text-bg.svg") no-repeat 0 0/contain
-      opacity: 0
-      transition: .8s ease
-      &._view
-        transform: translate(0 ,0)
-        opacity: 1
-
-
-.footer
-  margin: -100px 0 0 0
-  padding: 0 0 30px 0
-  &__container
-    max-width: 1400px
-    padding: 0 15px
-    margin: 0 auto
-  &__title
-    font-family: $font-gawaa
-    color: var(--promo-color-white)
-    text-shadow: var(--promo-shadow-blue-text)
-    font-size: 74px
-    line-height: 74px
-    text-align: center
-    transform: rotate(-3.731deg)
+      &:nth-child(1)
+        width: 20%
+      &:nth-child(2)
+        width: 25%
+      &:nth-child(3)
+        width: 25%
+      &:nth-child(4)
+        text-align: center
+        justify-content: center
+        width: 30%
+        margin: 0 0 0 -10px
+  &__body
+    background: var(--promo-color-blue2)
+    margin: 0 10px 0 0
+    overflow-y: scroll
+    z-index: 20
+    max-height: 265px
+    background: transparent
+    &::-webkit-scrollbar
+      width: 5px
+      height: 80%
+      border-radius: 50px
+      background: var(--promo-green-light2-opacity)
+    &::-webkit-scrollbar-thumb
+      background-color: var(--promo-green-light2)
+      border-radius: 50px
+    &-col
+      text-align: center
+      background: var(--promo-color-blue2)
+      font-family: $font-exo-400
+      font-size: 14px
+      line-height: 20px
+      padding: 16px 5px 16px 20px
+      width: 25%
+      display: flex
+      align-items: center
+      justify-content: center
+      color: var(--promo-color-white)
+      word-break: break-word
+      span
+        font-family: $font-suisse-reg
+      &:nth-child(1)
+        width: 20%
+      &:nth-child(2)
+        width: 25%
+      &:nth-child(3)
+        width: 25%
+      &:nth-child(4)
+        width: 30%
+        text-align: center
+        justify-content: center
+        margin-right: 0
   &__row
-    margin: -100px 0 60px 0
+    word-break: break-all
     display: flex
-  &__link
     position: relative
-    z-index: 30
-    animation: 2s decOne ease infinite
-    &:hover
-      animation-play-state: paused
+    border-bottom: 1px solid var(--promo-color-blue4)
+
+
+.choose
+  padding: 0 0 90px
+  position: relative
+  &__bg
+    width: 100%
+    height: 660px
+    position: absolute
+    top: -70px
+    left: 0
+    background: url("../img/winner/player-bg-desc.png") no-repeat 50% 0/cover
+  &__bg-table
+    width: 100%
+    height: 480px
+    position: absolute
+    bottom: 190px
+    left: 0
+    background: url("../img/table/table-bg-desc.png") no-repeat 50% 0/cover
+  &__container
+    display: flex
+    flex-direction: column
+    max-width: 1670px
+    margin: 0 auto
+    position: relative
+    z-index: 10
+  &__title
+    transform: rotate(-6deg)
+    font-family: $font-exo-900-i
+    font-size: 60px
+    line-height: 65px
+    max-width: 570px
+    text-align: center
+    margin: 0 auto 60px
+    color: var(--promo-color-white)
+    text-shadow: var(--promo-shadow-magenta)
+  &__list
+    display: grid
+    grid-template-columns: 300px 300px 300px 300px
+    margin: 0 auto 40px
+    gap: 7px 15px
   &__item
+    cursor: pointer
+    padding: 16px 15px 16px 55px
+    font-family: $font-exo-800-i
+    color: var(--promo-color-white)
+    border-radius: 35px
+    border: 2px solid var(--promo-color-blue3)
+    background: rgba(0, 7, 56, 0.70)
+    backdrop-filter: blur(2px)
+    text-transform: uppercase
+    position: relative
+    transition: .3s ease
+    &::before
+      content: ''
+      position: absolute
+      width: 30px
+      height: 30px
+      background: url("../img/choose/radio-item.svg") no-repeat 0 0/contain
+      left: 15px
+      top: 50%
+      transform: translateY(-50%)
+    &::after
+      content: ''
+      position: absolute
+      width: 73px
+      height: 73px
+      background: url("../img/choose/radio-item-active.svg") no-repeat 0 0/contain
+      left: -7px
+      top: 50%
+      transform: translateY(-50%)
+      opacity: 0
+      transition: .3s ease
+    &._active
+      background: var(--promo-color-blue6)
+      border: 2px solid var(--promo-green-light3)
+      box-shadow: var(--promo-green-shadow3)
+      &::after
+        opacity: 1
+    &:hover:after
+      opacity: 1
+    &:hover
+      background: var(--promo-color-blue6)
+      border: 2px solid var(--promo-green-light3)
+      box-shadow: var(--promo-green-shadow3)
+  &__des
+    font-family: $font-exo-600-i
+    font-size: 14px
+    line-height: 18px
+    max-width: 625px
+    margin: 0 auto 40px
+    text-align: center
+    color: var(--promo-color-purple)
+  &__link
+    align-self: center
+    margin: 0 0 20px
+  &__info
+    font-family: $font-exo-600
+    font-size: 14px
+    line-height: 16px
+    color: var(--promo-color-white)
+    text-align: center
+    margin: 0 0 30px
+    span
+      font-family: $font-exo-600
+      color: var(--promo-green-light3)
+  &__select
+    display: flex
+    align-items: center
+    justify-content: center
+
+    overflow: hidden
+    box-shadow: -5px 7px 15px 0px #051757
+    margin: 0 0 120px
+    &-item
+      padding: 12px 15px
+      font-family: $font-exo-700
+      font-size: 12px
+      line-height: 14px
+      text-transform: uppercase
+      background: #1A3C94
+      &.green
+        border-radius: 5px 0 0 5px
+        color: #3EA07F
+        &._active
+          background: linear-gradient(180deg, #1A3C94 0%, rgba(8, 196, 185, 0.73) 74.5%, #08C48A 100%)
+          color: #01FFA3
+      &.red
+        border-radius: 0 5px 5px 0
+        color: #BF3F73
+        &._active
+          color: #FF267E
+          background: linear-gradient(180deg, #1A3C94 0%, rgba(170, 0, 83, 0.60) 73%, #8E0046 100%)
+
+
+
+
+.closed
+  display: none
+  padding: 0 0 90px
+  position: relative
+  &__bg
+    width: 100%
+    height: 800px
+    position: absolute
+    top: -40px
+    left: 0
+    background: url("../img/closed/closed-bg-desc.png") no-repeat 50% 0/cover
+  &__container
+    display: flex
+    flex-direction: column
+    max-width: 1670px
+    margin: 0 auto
+    position: relative
+    z-index: 10
+  &__title
+    transform: rotate(-6deg)
+    font-family: $font-exo-900-i
+    font-size: 60px
+    line-height: 65px
+    max-width: 570px
+    text-align: center
+    margin: 0 auto 60px
+    color: var(--promo-color-white)
+    text-shadow: var(--promo-shadow-magenta)
+  &__info
+    margin: 0 auto 50px
+    border-radius: 36px
+    background: rgba(4, 16, 61, 0.20)
+    backdrop-filter: blur(8px)
+    border: 2px solid var(--promo-color-blue5)
+    width: 535px
+    height: 470px
     display: flex
     flex-direction: column
     align-items: center
-    &:first-child
-      margin: 0 -260px 0 0
-  &__image
-    margin: 0 0 -190px
-    position: relative
-    &::before
-      content: ''
-      position: absolute
-      top: 130px
-      left: 120px
-      width: 70%
-      height: 70%
-      background: url("../img/detail/spin.svg") no-repeat 0 0/contain
-      animation: 35s spin linear infinite
-    img
-      position: relative
-      z-index: 12
-  &__text
-    font-family: $font-suisse-reg
-    margin: 0 auto
-    max-width: 600px
-    font-size: 12px
-    line-height: 14px
-    text-shadow: var(--promo-shadow-gray-text)
-    color: var(--promo-color-gray)
-    text-align: center
-    a
-      font-family: $font-suisse-reg
-      color: var(--promo-color-gray)
-      text-decoration: underline
-      &:hover
-        text-decoration: none
+    justify-content: center
+    &-text
+      margin-top: -25px
+      color: var(--promo-color-white)
+      &-top
+        font-size: 14px
+        line-height: 18px
+        text-shadow: var(--promo-shadow-black)
+        font-family: $font-exo-600
+        text-align: center
+      &-bottom
+        font-size: 18px
+        line-height: 20px
+        text-shadow: var(--promo-shadow-black)
+        font-family: $font-exo-700
+        text-align: center
 
 
 .hidden
   opacity: 0 !important
   transform: scale(1) !important
 
-
-
-@keyframes spin
-  0%
-    transform: rotate(0)
-  100%
-    transform: rotate(360deg)
-
-
-@keyframes shadowMagenta
-  0%
-    filter: grayscale(1) brightness(0.5)
-  10%
-    filter: grayscale(0) brightness(1)
-  30%
-    filter: grayscale(1) brightness(0.5)
-  40%
-    filter: grayscale(0) brightness(1)
-  55%
-    filter: grayscale(0) brightness(1)
-  65%
-    filter: grayscale(1) brightness(0.5)
-  85%
-    filter: grayscale(0) brightness(1)
-  100%
-    filter: grayscale(0) brightness(1)
-
-@keyframes titleAnimation
-  0%
-    filter: grayscale(1) brightness(0.5)
-  10%
-    filter: grayscale(0) brightness(1)
-  20%
-    filter: grayscale(1) brightness(0.5)
-  30%
-    filter: grayscale(0) brightness(1)
-  70%
-    filter: grayscale(0) brightness(1)
-  90%
-    filter: grayscale(0) brightness(1)
-  100%
-    filter: grayscale(1) brightness(0.5)
-
-@keyframes opacityArrow
-  0%
-    opacity: 0
-  10%
-    opacity: 1
-  30%
-    opacity: 0
-  40%
-    opacity: 1
-  55%
-    opacity: 1
-  65%
-    opacity: 0
-  85%
-    opacity: 1
-  100%
-    opacity: 1
-
-@keyframes shadowPurple
-  0%
-    filter: drop-shadow(0px 0px 0px var(--promo-color-purple))
-    transform: scale(1)
-  50%
-    filter: drop-shadow(0px 0px 20px var(--promo-color-purple))
-    transform: scale(1.02)
-  100%
-    filter: drop-shadow(0px 0px 0px var(--promo-color-purple))
-    transform: scale(1)
-
-@keyframes shadowBlue
-  0%
-    filter: drop-shadow(0px 0px 3px var(--promo-color-blue))
-  50%
-    filter: drop-shadow(0px 0px 17px var(--promo-color-blue))
-  100%
-    filter: drop-shadow(0px 0px 3px var(--promo-color-blue))
-
-
-@keyframes decOne
-  0%
-    transform: scale(1)
-  50%
-    transform: scale(1.05)
-  100%
-    transform: scale(1)
-
-
-
-@keyframes decTwo
-  0%
-    transform: rotate(-5.5deg) scale(1)
-  50%
-    transform: rotate(-1.5deg) scale(1.05)
-  100%
-    transform: rotate(-5.5deg) scale(1)
-
-@keyframes decThree
-  0%
-    transform: rotate(0deg) scale(1)
-  50%
-    transform: translateY(-10px) scale(1.05)
-  100%
-    transform: rotate(0deg) scale(1)
-
-@keyframes decFourth
-  0%
-    transform: rotate(30deg) scale(1)
-  50%
-    transform: rotate(32deg) scale(1.05)
-  100%
-    transform: rotate(30deg) scale(1)
-
-@keyframes prizeItem
-  0%
-    transform: scale(1)
-  50%
-    transform: scale(1.04)
-  100%
-    transform: scale(1)
+.footer
+  padding: 0 0 55px
+  &__container
+    max-width: 1470px
+    padding: 0 15px
+    margin: 0 auto
 
 
 

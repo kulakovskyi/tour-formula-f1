@@ -3,19 +3,19 @@ document.addEventListener('DOMContentLoaded', function () {
     let startX = 0;
     let isDragging = false;
 
-    const slider = document.querySelector('.prize__slider');
-    const items = document.querySelectorAll('.prize__item');
+    const slider = document.querySelector('.formula__slider');
+    const items = document.querySelectorAll('.formula__item');
     const totalItems = items.length;
 
     function updateSlider() {
         items.forEach((item, index) => {
             const distance = index - currentIndex;
-            let newPosition = distance * 33.33;
+            let newPosition = distance * 50;
 
             if (distance > totalItems / 2) {
-                newPosition -= totalItems * 33.33;
+                newPosition -= totalItems * 50;
             } else if (distance < -totalItems / 2) {
-                newPosition += totalItems * 33.33;
+                newPosition += totalItems * 50;
             }
 
             const scale = index === currentIndex ? 1 : 0.8;
@@ -62,8 +62,8 @@ document.addEventListener('DOMContentLoaded', function () {
         isDragging = false;
     }
 
-    const buttonsLeft = document.querySelectorAll('.button-slider-left')
-    const buttonsRight = document.querySelectorAll('.button-slider-right')
+    const buttonsLeft = document.querySelectorAll('.formula__control-left')
+    const buttonsRight = document.querySelectorAll('.formula__control-right')
     buttonsLeft.forEach(btn  => {
         btn.addEventListener('click', () => {
             moveSlider(-1);
@@ -88,44 +88,3 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-/********************************ANIMATION******************************/
-
-const animItems = document.querySelectorAll('._anim-items');
-
-if(animItems.length > 0) {
-    window.addEventListener('scroll' , animOnScroll)
-
-    function animOnScroll(params){
-        for(let index=0; index<animItems.length; index++){
-            const animItem = animItems[index];
-            const animItemHight = animItem.offsetHeight;
-            const animItemOffSet = offset(animItem).top;
-            const animStart = 4;
-
-            let animItemPoint = window.innerHeight - animItemHight / animStart;
-
-            if(animItemHight > window.innerHeight){
-                animItemPoint = window.innerHeight - window.innerHeight / animStart;
-            }
-
-            if((pageYOffset > animItemOffSet-animItemPoint) && pageYOffset < (animItemOffSet + animItemHight)){
-                animItem.classList.add('_view');
-            }  else {
-                if(!animItem.classList.contains('_anim-no-hide')){
-                    animItem.classList.remove('_view');
-                }
-            }
-        }
-
-        function offset(el) {
-            var rect = el.getBoundingClientRect(),
-                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
-        }
-    }
-    setTimeout(() => {
-        animOnScroll();
-    }, 300);
-
-}
