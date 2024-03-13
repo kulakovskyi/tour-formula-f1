@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let currentIndex = 1;
+    let currentIndex = 0;
     let startX = 0;
     let isDragging = false;
 
@@ -33,6 +33,28 @@ document.addEventListener('DOMContentLoaded', function () {
             } else if (distance === -1 || (currentIndex === 0 && index === totalItems - 1)) {
                 item.classList.add('left-slide');
             }
+
+            //Showing blocks
+            const winnerBlock = document.querySelector('.winner')
+            const chooseBlock = document.querySelector('.choose')
+            const closedBlock = document.querySelector('.closed')
+
+            if(item.dataset.block === 'winner' && item.classList.contains('active')){
+                winnerBlock.classList.remove('_hidden')
+                chooseBlock.classList.add('_hidden')
+                closedBlock.classList.add('_hidden')
+            }
+            if(item.dataset.block === 'choose' && item.classList.contains('active')){
+                chooseBlock.classList.remove('_hidden')
+                winnerBlock.classList.add('_hidden')
+                closedBlock.classList.add('_hidden')
+            }
+            if(item.dataset.block === 'closed' && item.classList.contains('active')){
+                closedBlock.classList.remove('_hidden')
+                winnerBlock.classList.add('_hidden')
+                chooseBlock.classList.add('_hidden')
+            }
+
         });
     }
 

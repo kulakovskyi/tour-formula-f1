@@ -1,18 +1,4 @@
 \:root
-
-  --promo-color-black: #000
-  --promo-color-pink: #E904F5
-  --promo-color-gray: #E3E3E3
-  --promo-color-blue: rgba(0, 198, 255, 1)
-
-
-  --promo-colo-orange: #BB8531
-  --promo-colo-orange-two: #E18A03
-  --promo-shadow-blue-text: 0px 0px 15px rgba(0, 198, 255, 0.62), 0px 0px 20px rgba(0, 198, 255, 0.62), 0px 0px 20px rgba(0, 198, 255, 0.62), 0px 0px 20px rgba(0, 198, 255, 0.62), 0px 0px 11px #00C6FF
-  --promo-shadow-orange-text: 0px 0px 5px rgba(255, 229, 0, 0.60), 0px 0px 7px rgba(255, 230, 14, 0.70), 0px 0px 17px rgba(255, 229, 0, 0.30), 0px 0px 24px rgba(255, 229, 0, 0.40), 2px 2px 1px #AD7402, 5px 7px 4px rgba(0, 0, 0, 0.25)
-  --promo-shadow-orange-two-text: 0px 0px 5px #FFF06D, 0px 0px 7px #FFF06D, 0px 0px 17px #FFF06D, 0px 0px 24px #FFF06D, 2px 2px 1px #AD7402, 5px 7px 4px rgba(0, 0, 0, 0.25)
-  --promo-shadow-gray-text: 1px 1px 1px rgba(0, 0, 0, 0.45)
-  --promo-shadow-pink-text: 2px 2px 0px #000
   //new
   --promo-bg-color: #0B1560
   --promo-color-magenta: #FF267E
@@ -41,9 +27,7 @@
 
 
 //fonts
-$font-suisse-semb: SuisseIntl-SemiBold, sans-serif
-$font-suisse-bold: SuisseIntl-Bold, sans-serif
-$font-suisse-reg: SuisseIntl-Regular, sans-serif
+
 
 $font-exo-900-i: Exo2-BlackItalic, sans-serif
 $font-exo-800-i: Exo2-ExtraBoldItalic, sans-serif
@@ -97,6 +81,12 @@ body
   position: relative
   z-index: 1
   transition: opacity .3s ease
+  @media screen and (max-width: 1024px)
+    padding: 20px 35px 22px
+    font-size: 22px
+    line-height: 22px
+  @media screen and (max-width: 550px)
+    padding: 20px 25px 22px
   &:hover
     opacity: .7
 
@@ -128,6 +118,7 @@ body
     border-radius: 5px
     padding: 20px 70px 23px 25px
     position: relative
+
     &:before,&:after
       content: ""
       background:  var(--promo-green-light)
@@ -152,7 +143,7 @@ body
     @media screen and (max-width: 550px)
       padding: 20px 20px
     &-wrap
-      font-family: $font-suisse-reg
+      font-family: $font-exo-400
       height: 400px
       overflow-y: scroll
       font-size: 14px
@@ -170,15 +161,15 @@ body
         background-color: var(--promo-green-light)
         width: 4px
       p
-        font-family: $font-suisse-reg
+        font-family: $font-exo-400
       span
         display: block
         padding-left: 15px
-        font-family: $font-suisse-reg
+        font-family: $font-exo-400
       .retreat1
         padding-left: 30px
       a
-        font-family: $font-suisse-reg
+        font-family: $font-exo-400
         color:  var(--promo-color-white)
         text-decoration: underline
         &:hover
@@ -194,7 +185,7 @@ body
           display: inline-block
           margin: 0 4px 2px 0
       strong
-        font-family: $font-suisse-reg
+        font-family: $font-exo-400
 
 
 
@@ -203,17 +194,20 @@ body
   z-index: 10
   padding: 100px 0 80px
   background: url("../img/welcome/welcome-bg-desc.png") no-repeat 50% 0/cover
-  @media screen and (max-width: 1024px)
-    background: url("../img/welcome/welcome-bg-tab.jpg") no-repeat 50% 0/cover
-  @media screen and (max-width: 550px)
-    background: url("../img/welcome/welcome-bg-mob.jpg") no-repeat 50% 0/cover
+  @media screen and (max-width: 800px)
+    background: url("../img/welcome/welcome-bg-tab.png") no-repeat 50% 0/cover
+  @media screen and (max-width: 410px)
+    background: url("../img/welcome/welcome-bg-mob.png") no-repeat 50% 0/cover
   &__container
     max-width: 1670px
-    padding: 0 15px
+    padding: 0 55px
     margin: 0 auto
   &__title
     transform: rotate(-10deg)
     margin: 0 0 380px
+    &-top
+      position: relative
+      right: -20px
     &-top,
     &-bottom
       font-size: 70px
@@ -255,6 +249,10 @@ body
     width: 1920px
     height: 655px
     background: url("../img/info/info-bg-desc.png") no-repeat 0 0/contain
+    @media screen and (max-width: 1024px)
+      background: url("../img/info/info-bg-tab.png") no-repeat 0 0/contain
+    @media screen and (max-width: 550px)
+      background: url("../img/info/info-bg-mob.png") no-repeat 0 0/contain
   &__container
     position: relative
     z-index: 10
@@ -281,7 +279,7 @@ body
   &__text
     font-family: $font-exo-600-i
     font-size: 16px
-    line-height: 32px
+    line-height: 26px
     letter-spacing: 0.48px
     text-align: center
     color: var(--promo-color-white)
@@ -301,6 +299,8 @@ body
     height: 440px
     mix-blend-mode: soft-light
     background: url("../img/rules/rules-bg-desc.png") no-repeat 50% 0/cover
+    @media screen and (max-width: 550px)
+      background: url("../img/rules/rules-bg-mob.png") no-repeat 50% 0/cover
   &__container
     max-width: 1370px
     padding: 0 15px
@@ -348,6 +348,8 @@ body
         font-family: $font-exo-800-i
         color: var(--promo-color-white)
   &__drop
+    position: relative
+    z-index: 20
     max-width: 530px
 
 
@@ -360,15 +362,23 @@ body
     width: 100%
     height: 570px
     background: url("../img/formula/formula-bg-desc.png") no-repeat 50% 0/cover
+    @media screen and (max-width: 1024px)
+      background: url("../img/formula/formula-bg-tab.png") no-repeat 50% 0/cover
+    @media screen and (max-width: 550px)
+      background: url("../img/formula/formula-bg-mob.png") no-repeat 50% 0/cover
   &__bg-slider
     mix-blend-mode: lighten
     position: absolute
-    width: 1409px
-    height: 580px
+    width: 1119px
+    height: 480px
     left: 50%
-    top: 55px
-    transform: translateX(-49%)
+    top: 165px
+    transform: translateX(-47%)
     background: url("../img/formula/bg-slider-desc.png") no-repeat 0 0/contain
+    @media screen and (max-width: 1024px)
+      background: url("../img/formula/bg-slider-tab.png") no-repeat 0 0/contain
+    @media screen and (max-width: 550px)
+      background: url("../img/formula/bg-slider-mob.png") no-repeat 0 0/contain
   &__container
     max-width: 1670px
     margin: 0 auto
@@ -383,6 +393,7 @@ body
     max-width: 1220px
     left: 50%
     top: 50%
+    z-index: 15
     transform: translate(-50%, -50%)
     display: flex
     justify-content: space-between
@@ -465,8 +476,13 @@ body
       .formula__item-date
         display: flex !important
       .formula__item-image
+        pointer-events: none
         img
           max-height: 180px !important
+          @media screen and (max-width: 550px)
+            max-height: 90px !important
+          @media screen and (max-width: 370px)
+            max-height: 80px !important
       &::before
         opacity: 0
       &::after
@@ -537,9 +553,10 @@ body
         color: var(--promo-color-white)
 
 .winner
-  display: none
   padding: 0 0 90px
   position: relative
+  &._hidden
+    display: none
   &__bg
     width: 100%
     height: 660px
@@ -547,6 +564,10 @@ body
     top: -160px
     left: 0
     background: url("../img/winner/player-bg-desc.png") no-repeat 50% 0/cover
+    @media screen and (max-width: 1024px)
+      background: url("../img/winner/player-bg-tab.png") no-repeat 50% 0/cover
+    @media screen and (max-width: 550px)
+      background: url("../img/winner/player-bg-mob.png") no-repeat 50% 0/cover
   &__bg-table
     width: 100%
     height: 480px
@@ -554,6 +575,14 @@ body
     bottom: 190px
     left: 0
     background: url("../img/table/table-bg-desc.png") no-repeat 50% 0/cover
+    @media screen and (max-width: 1024px)
+      width: 1845px
+      height: 410px
+      position: absolute
+      bottom: 130px
+      left: 50%
+      transform: translateX(-60%)
+      background: url("../img/table/table-bg-tab.png") no-repeat 50% 0/cover
   &__container
     display: flex
     flex-direction: column
@@ -710,11 +739,9 @@ body
     &::-webkit-scrollbar
       width: 5px
       height: 80%
-      border-radius: 50px
       background: var(--promo-green-light2-opacity)
     &::-webkit-scrollbar-thumb
       background-color: var(--promo-green-light2)
-      border-radius: 50px
     &-col
       text-align: center
       background: var(--promo-color-blue2)
@@ -729,7 +756,7 @@ body
       color: var(--promo-color-white)
       word-break: break-word
       span
-        font-family: $font-suisse-reg
+        font-family: $font-exo-400
       &:nth-child(1)
         width: 20%
       &:nth-child(2)
@@ -751,6 +778,8 @@ body
 .choose
   padding: 0 0 90px
   position: relative
+  &._hidden
+    display: none
   &__bg
     width: 100%
     height: 660px
@@ -758,6 +787,10 @@ body
     top: -70px
     left: 0
     background: url("../img/winner/player-bg-desc.png") no-repeat 50% 0/cover
+    @media screen and (max-width: 1024px)
+      background: url("../img/winner/player-bg-tab.png") no-repeat 50% 0/cover
+    @media screen and (max-width: 550px)
+      background: url("../img/winner/player-bg-mob.png") no-repeat 50% 0/cover
   &__bg-table
     width: 100%
     height: 480px
@@ -765,6 +798,14 @@ body
     bottom: 190px
     left: 0
     background: url("../img/table/table-bg-desc.png") no-repeat 50% 0/cover
+    @media screen and (max-width: 1024px)
+      width: 1845px
+      height: 410px
+      position: absolute
+      bottom: 130px
+      left: 50%
+      transform: translateX(-60%)
+      background: url("../img/table/table-bg-tab.png") no-repeat 50% 0/cover
   &__container
     display: flex
     flex-direction: column
@@ -856,11 +897,14 @@ body
     display: flex
     align-items: center
     justify-content: center
-
+    width: calc(100% - 30px)
     overflow: hidden
     box-shadow: -5px 7px 15px 0px #051757
-    margin: 0 0 120px
+    margin: 0 auto 120px
+    align-self: center
     &-item
+      text-align: center
+
       padding: 12px 15px
       font-family: $font-exo-700
       font-size: 12px
@@ -881,12 +925,11 @@ body
           background: linear-gradient(180deg, #1A3C94 0%, rgba(170, 0, 83, 0.60) 73%, #8E0046 100%)
 
 
-
-
 .closed
-  display: none
   padding: 0 0 90px
   position: relative
+  &._hidden
+    display: none
   &__bg
     width: 100%
     height: 800px
@@ -894,6 +937,10 @@ body
     top: -40px
     left: 0
     background: url("../img/closed/closed-bg-desc.png") no-repeat 50% 0/cover
+    @media screen and (max-width: 1024px)
+      background: url("../img/winner/player-bg-tab.png") no-repeat 50% 0/cover
+    @media screen and (max-width: 550px)
+      background: url("../img/winner/player-bg-mob.png") no-repeat 50% 0/cover
   &__container
     display: flex
     flex-direction: column
