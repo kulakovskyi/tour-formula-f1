@@ -42,9 +42,14 @@ $font-exo-400: Exo2-Regular, sans-serif
 
 body
   &.dark
-    --promo-bg-color: #111218
-    --promo-color-gradient-blue: linear-gradient(180deg, rgba(17, 18, 24, 0.00) 0%, #111218 90.57%)
-    --promo-color-gradient-blue-prize: linear-gradient(90deg, rgba(17, 18, 24, 0.00) 0%, #111218 100%)
+    --promo-bg-color: #1B1D2B
+    .welcome
+      background: url("../img/welcome/welcome-bg-desc-dark.png") no-repeat 50% 0/cover
+      @media screen and (max-width: 800px)
+        background: url("../img/welcome/welcome-bg-tab-dark.png") no-repeat 50% 0/cover
+      @media screen and (max-width: 410px)
+        background: url("../img/welcome/welcome-bg-mob-dark.png") no-repeat 50% 0/cover
+
 
 .overflow
   overflow: hidden
